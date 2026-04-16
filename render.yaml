@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    rootDir: .
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: SECRET_OR_KEY
+        sync: false
+      - key: NODEMAILER_USER
+        sync: false
+      - key: NODEMAILER_PASSWORD
+        sync: false
+      - key: NODEMAILER_SERVICE
+        sync: false
